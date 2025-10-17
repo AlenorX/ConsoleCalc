@@ -19,6 +19,8 @@ def main():
 
 
 def CalculateOperation(param):
+    if param[1] != "+" or "-" or "*" or "/" or "%":
+        example = "Не поддерживаются цифры.Пишите числа"
     if param[1] == "+":
         example = int(param[0]) + int(param[2])
         logging.debug("The mathematical example is solved")
