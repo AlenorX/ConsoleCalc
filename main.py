@@ -4,6 +4,7 @@ import logging
 list_greeting = ["Здравствуйте!", "Привет!", "Hola!"]
 logging.basicConfig(filename="log_project.log", level=logging.DEBUG)
 
+#Здесь пользователь вводит пример и код передаёт его в функцию CalculateOperation
 def main():
     random_word = random.choice(list_greeting)
     print(f"{random_word}, это ConsoleCalc!")
@@ -16,7 +17,7 @@ def main():
         print(f"Результат: {result}")
         
 
-
+#CalculateOperation проверяет данные, которые ввёл пользователь и решает пример
 def CalculateOperation(param):
     try:
         formatted_text = param.split(" ")
@@ -38,7 +39,6 @@ def CalculateOperation(param):
     except ValueError:
         return "Только цифры и числа, но не буквы и слова"
 
-
+#Инициализация функции main
 if __name__ == "__main__":
     main()
-
