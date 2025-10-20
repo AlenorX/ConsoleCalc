@@ -4,7 +4,6 @@ import logging
 list_greeting = ["Здравствуйте!", "Привет!", "Hola!"]
 logging.basicConfig(filename="log_project.log", level=logging.DEBUG)
 
-
 def main():
     random_word = random.choice(list_greeting)
     print(f"{random_word}, это ConsoleCalc!")
