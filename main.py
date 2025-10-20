@@ -10,7 +10,7 @@ def main():
     print(f"{random_word}, это ConsoleCalc!")
     print("Работаю с любыми арифметическими операторами." + "\n" + "Чтобы выйти, напишите quit")
     while(True):
-        user_input = input("Введите математическую операцию (Например: 5+5)")
+        user_input = input("Введите математическую операцию (Например: [Первое число] [оператор] [Второе число])")
         if user_input == "quit":
             break
         result = CalculateOperation(user_input)
@@ -20,26 +20,24 @@ def main():
 
 def CalculateOperation(param):
     try:
-        if param[1] == "+":
-            example = int(param[0]) + int(param[2])
-            logging.debug("The mathematical example is solved")
-        elif param[1] == "-":
-            example = int(param[0]) - int(param[2])
-            logging.debug("The mathematical example is solved")
-        elif param[1] == "*":
-            example = int(param[0]) * int(param[2])
-            logging.debug("The mathematical example is solved")
-        elif param[1] == "/":
-            example = int(param[0]) / int(param[2])
-            logging.debug("The mathematical example is solved")
-        elif param[1] == "%":
-            example = int(param[0]) % int(param[2])
-            logging.debug("The mathematical example is solved")
-        return example
-    except UnboundLocalError:
-        return "Ошибка. Введите пример!"
-    
-
+        formatted_text = param.split(" ")
+        dirtyList = [formatted_text[0], formatted_text[2]]
+        list_index = list(map(int, dirtyList))
+        if formatted_text[1] == "+":
+            result = list_index[0] + list_index[1]
+        elif formatted_text[1] == "-":
+            result = list_index[0] - list_index[1]
+        elif formatted_text[1] == "*":
+            result = list_index[0] * list_index[1]
+        elif formatted_text[1] == "/":
+            result = list_index[0] / list_index[1]
+        elif formatted_text[1] == "%":
+            result = list_index[0] % list_index[1]
+        return result
+    except IndexError:
+        return "Напишите пример по шаблону"
+    except ValueError:
+        return "Только цифры и числа, но не буквы и слова"
 
 
 if __name__ == "__main__":
