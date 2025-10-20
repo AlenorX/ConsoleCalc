@@ -1,5 +1,6 @@
 # ConsoleCalc
-## ConsoleСalc - a project where you can solve simple mathematical operations. A simple console calculator that works by index.
+
+ConsoleСalc - a project where you can solve simple mathematical operations. A simple console calculator that works by index.
 
 Working principle:
 1) The program asks for a math example 🤔
