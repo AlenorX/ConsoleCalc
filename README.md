@@ -1,9 +1,9 @@
 # ConsoleCalc
 
-ConsoleСalc - a project where you can solve simple mathematical operations. A simple console calculator that works by index.
+ConsoleCalc - это проект, в котором вы можете решать простые математические операции. Простой консольный калькулятор, который работает по индексу.
 
-Working principle:
-1) The program asks for a math example 🤔
-2) You enter your example 📝
-3) In the CalculateOperation function, your given example is converted and calculated 🔧
-4) It returns to the main function 📤
+Принцип работы:
+1) Программа запрашивает математический пример 🤔
+2) Вы вводите свой пример 📝
+3) В функции CalculateOperation приведенный вами пример преобразуется и вычисляется 🔧
+4) Он возвращается к основной функции 📤
